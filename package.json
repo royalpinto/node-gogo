@@ -33,6 +33,7 @@
     "node": ">=0.5.1"
   },
   "dependencies": {
-  	"bindings":"*"
+    "bindings": "*",
+    "nan": "^2.3.5"
   }
 }
