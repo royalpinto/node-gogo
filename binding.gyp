@@ -2,6 +2,9 @@
 	"targets": [
 		{
 			"target_name": "threads_a_gogo",
+			"include_dirs": [
+				"<!(node -e \"require('nan')\")"
+			],
 			#"requires": ["minifier"], |> We dont need this, as the script files are pre-made already.
 			"sources": [
 				"src/threads_a_gogo.cc",
