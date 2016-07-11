@@ -1,8 +1,8 @@
 {
-  "name": "threads_a_gogo",
+  "name": "gogothreads",
   "version": "0.1.7",
-  "main": "build/Release/threads_a_gogo.node",
-  "description": "████ Simple and fast JavaScript threads for Node.js ████",
+  "main": "lib/index.js",
+  "description": "Simple and fast JavaScript threads for Node.js",
   "keywords": [
     "The",
     "most",
@@ -11,19 +11,15 @@
     "ever",
     "a gogo"
   ],
-  "author": {
-    "name":   "Jorge Chamorro Bieling",
-    "email":  "jorge@jorgechamorro.com",
-    "twitter": "jorgechamorro"
-  },
-  "homepage": "https://github.com/xk/node-threads-a-gogo",
+  "author": "Royal Pinto <royalpinto@gmail.com>",
+  "homepage": "https://github.com/royalpinto/node-gogothreads",
   "bugs": {
-    "url":    "http://github.com/xk/node-threads-a-gogo/issues",
-    "email":  "jorge@jorgechamorro.com"
+    "url":    "https://github.com/royalpinto/node-gogothreads/issues",
+    "email":  "royalpinto@gmail.com"
   },
   "repository": {
     "type": "git",
-    "url": "http://github.com/xk/node-threads-a-gogo.git"
+    "url": "https://github.com/royalpinto/node-gogothreads"
   },
   "scripts": {
     "install": "node-gyp rebuild"
@@ -33,7 +29,6 @@
     "node": ">=0.5.1"
   },
   "dependencies": {
-    "bindings": "*",
     "nan": "^2.3.5"
   }
 }

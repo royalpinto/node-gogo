@@ -1,7 +1,7 @@
 {
 	"targets": [
 		{
-			"target_name": "threads_a_gogo",
+			"target_name": "gogothreads",
 			"include_dirs": [
 				"<!(node -e \"require('nan')\")"
 			],
