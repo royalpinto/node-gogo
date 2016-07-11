@@ -196,13 +196,19 @@ static void* aThread (void* arg) {
   int dummy;
   pthread_setcancelstate(PTHREAD_CANCEL_ENABLE, &dummy);
   pthread_setcanceltype(PTHREAD_CANCEL_ASYNCHRONOUS, &dummy);
-  
-  typeThread* thread= (typeThread*) arg; 
-  // Create a new Isolate and make it the current one.
+
+  typeThread* thread= (typeThread*) arg;
+
+// Create a new Isolate and make it the current one.
+#if NODE_MODULE_VERSION >= NODE_4_0_MODULE_VERSION
   ArrayBufferAllocator allocator;
   Isolate::CreateParams create_params;
   create_params.array_buffer_allocator = &allocator;
   thread->isolate= Isolate::New(create_params);
+#else
+  thread->isolate= Isolate::New();
+#endif
+
   Nan::SetIsolateData(thread->isolate, thread);
 
   if (useLocker) {
